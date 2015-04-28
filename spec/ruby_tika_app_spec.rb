@@ -4,7 +4,7 @@ describe RubyTikaApp do
 
   before(:each) do
     doc_path = "#{File.join(File.dirname(__FILE__))}/docs"
-    
+
     @test_file = "#{doc_path}/graph sampling simplex - 11.pdf"
 
     @cnn_com_file = "#{doc_path}/cnn.com"
@@ -25,14 +25,14 @@ describe RubyTikaApp do
       rta = RubyTikaApp.new(@test_file)
       rta.to_xml[0..37].should == "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
     end
-  
+
     it 'middle' do
       rta = RubyTikaApp.new(@test_file)
       xml = rta.to_xml
 
       xml_size = xml.size / 2
 
-      xml[xml_size..(xml_size + 100)].should == "ction IV). Besides,\nMHRW performs better in well connected graphs than in\nloosely connected graphs, a"
+      xml[xml_size..(xml_size + 100)].should == "plicated nodes make the node distribution converge\nto uniform distribution. We do not need to conside"
     end
   end
 
@@ -44,19 +44,19 @@ describe RubyTikaApp do
 
     it 'middle' do
       rta = RubyTikaApp.new(@test_file)
-      rta.to_html[1000 ... 1100].should == "rceName\" content=\"graph sampling simplex - 11.pdf\"/>\n<meta name=\"Last-Save-Date\" content=\"2011-03-29"
+      rta.to_html[1000 ... 1100].should == "Z\"/>\n<meta name=\"access_permission:assemble_document\" content=\"true\"/>\n<meta name=\"meta:creation-dat"
     end
   end
 
   describe '#to_json' do
     it 'header' do
       rta = RubyTikaApp.new(@test_file)
-      rta.to_json[0..42].should == "{ \"Application\":\"\\u0027Certified by IEEE PD"
+      rta.to_json[0..42].should == "{\"Application\":\"\\u0027Certified by IEEE PDF"
     end
 
     it 'middle' do
       rta = RubyTikaApp.new(@test_file)
-      rta.to_json[100 ... 150].should == "h\":171510, \n\"Content-Type\":\"application/pdf\", \n\"Cr"
+      rta.to_json[100 ... 150].should == "\"171510\",\"Content-Type\":\"application/pdf\",\"Creatio"
     end
   end
 
