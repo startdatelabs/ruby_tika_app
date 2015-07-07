@@ -44,7 +44,7 @@ describe RubyTikaApp do
 
     it 'middle' do
       rta = RubyTikaApp.new(@test_file)
-      rta.to_html[1000 ... 1100].should == "Z\"/>\n<meta name=\"access_permission:assemble_document\" content=\"true\"/>\n<meta name=\"meta:creation-dat"
+      rta.to_html[1000 ... 1100].should == "on/pdf\"/>\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.DefaultParser\"/>\n<meta name=\"X-Pa"
     end
   end
 
