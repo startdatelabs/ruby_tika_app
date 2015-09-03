@@ -3,7 +3,7 @@ $:.push File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = 'ruby_tika_app'
-  s.version     = '1.9.0'
+  s.version     = '1.10.0'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Chris Parker']
   s.email       = %w(mrcsparker@gmail.com)
