@@ -32,7 +32,7 @@ describe RubyTikaApp do
 
       xml_size = xml.size / 2
 
-      xml[xml_size..(xml_size + 100)].should == "plicated nodes make the node distribution converge\nto uniform distribution. We do not need to conside"
+      xml[xml_size..(xml_size + 100)].should == "icated nodes as valid nodes.\nThese duplicated nodes make the node distribution converge\nto uniform di"
     end
   end
 
@@ -44,7 +44,7 @@ describe RubyTikaApp do
 
     it 'middle' do
       rta = RubyTikaApp.new(@test_file)
-      rta.to_html[1000 ... 1100].should == "on/pdf\"/>\n<meta name=\"X-Parsed-By\" content=\"org.apache.tika.parser.DefaultParser\"/>\n<meta name=\"X-Pa"
+      rta.to_html[1000 ... 1100].should == "ame=\"Content-Length\" content=\"171510\"/>\n<meta name=\"Content-Type\" content=\"application/pdf\"/>\n<meta "
     end
   end
 
