@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe RubyTikaApp do
 
@@ -32,7 +33,7 @@ describe RubyTikaApp do
 
       xml_size = xml.size / 2
 
-      xml[xml_size..(xml_size + 100)].should == "icated nodes as valid nodes.\nThese duplicated nodes make the node distribution converge\nto uniform di"
+      xml[xml_size..(xml_size + 100)].should == "Frontier Sampling (FS).\nSince this is the only difference between MHRW and USDSG,\nto be simple, we wi"
     end
   end
 
@@ -44,7 +45,7 @@ describe RubyTikaApp do
 
     it 'middle' do
       rta = RubyTikaApp.new(@test_file)
-      rta.to_html[1000 ... 1100].should == "ame=\"Content-Length\" content=\"171510\"/>\n<meta name=\"Content-Type\" content=\"application/pdf\"/>\n<meta "
+      rta.to_html[10000 ... 10100].should == "g a user&rsquo;s profile is\nmuch more time-consuming compared with the calculation to\nchoose the nex"
     end
   end
 
