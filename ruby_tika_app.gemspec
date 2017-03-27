@@ -2,16 +2,14 @@
 $:.push File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name        = 'ruby_tika_app'
+  s.name        = 'sw_ruby_tika_app'
   s.version     = '1.14.0'
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ['Chris Parker']
-  s.email       = %w(mrcsparker@gmail.com)
-  s.homepage    = 'https://github.com/mrcsparker/ruby_tika_app'
+  s.authors     = ['Chris Parker', 'Ilya Bazylchuk']
+  s.email       = %w(ilya.bazylchuk@startdatelabs.com)
+  s.homepage    = 'https://github.com/startdatelabs/ruby_tika_app'
   s.summary     = %q{Wrapper around the tika-app jar}
   s.description = %q{Wrapper around the tika-app jar}
-
-  s.rubyforge_project = 'ruby_tika_app'
 
   s.files         = `git ls-files`.split("\n") +
     %w(LICENSE README.md HISTORY)
@@ -29,4 +27,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency('json')
   s.add_development_dependency('rack')
   s.add_development_dependency('thin')
+  s.add_development_dependency('pry')
+  s.add_development_dependency('rb-readline')
 end
